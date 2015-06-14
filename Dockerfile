@@ -1,6 +1,6 @@
 FROM dylanlindgren/docker-phpcli:latest
 
-MAINTAINER "Dylan Lindgren" <dylan.lindgren@gmail.com>
+MAINTAINER "Dylan Miles" <dylan.g.miles@gmail.com>
 
 WORKDIR /tmp
 
@@ -13,11 +13,12 @@ RUN apt-get update -y && \
     php5-pgsql \
     php5-redis \
     php5-sqlite \
-    php5-gd
+    php5-gd \
+    php5-tidy
 
-RUN mkdir -p /data/www
+RUN mkdir -p /data
 VOLUME ["/data"]
-WORKDIR /data/www
+WORKDIR /data/web
 
 ENTRYPOINT ["php", "artisan"]
 CMD ["--help"]
