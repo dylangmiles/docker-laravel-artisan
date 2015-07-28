@@ -6,6 +6,7 @@ WORKDIR /tmp
 
 RUN apt-get update -y && \
     apt-get install -y \
+    php5-curl \
     php5-mcrypt \
     php5-mongo \
     php5-mssql \
