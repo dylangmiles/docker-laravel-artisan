@@ -15,7 +15,8 @@ RUN apt-get update -y && \
     php5-redis \
     php5-sqlite \
     php5-gd \
-    php5-tidy
+    php5-tidy \
+    php5-memcached
 
 RUN mkdir -p /data
 VOLUME ["/data"]
